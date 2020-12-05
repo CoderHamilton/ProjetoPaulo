@@ -1,21 +1,32 @@
-module.exports = app =>
+const express = require('express');
+
+const router = express.Router();
+
+router.get("/", (req, res) => 
   {
-    const livros = require("../controller/livro.controller.js");
+    res.json( { message: "Hello Word!!" } );
+  });
 
-    var routes = require("express").Router();
+module.exports = router;
 
-    routes.post("/", livros.create);
+// module.exports = app =>
+//   {
+//     const livros = require("../controller/livro.controller.js");
 
-    routes.get("/", livros.findAll);
+//     var routes = require("express").Router();
 
-    routes.get("/", livros.findOne);
+//     routes.post("/", livros.create);
 
-    routes.put("/", livros.update);
+//     routes.get("/", livros.findAll);
 
-    routes.delete("/", livros.delete);
+//     routes.get("/", livros.findOne);
 
-    routes.delete("/", livros.deleteAll);
+//     routes.put("/", livros.update);
 
-    app.use('/api/livros', routes);
+//     routes.delete("/", livros.delete);
+
+//     routes.delete("/", livros.deleteAll);
+
+//     app.use('/api/livros', routes);
     
-  }
+//   }
