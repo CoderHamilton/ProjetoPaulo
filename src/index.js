@@ -19,6 +19,9 @@ app.use(routes);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const database = require('./models');
+database.sequelize.sync();
+
 const PORT = process.env.PORT || 8080;
   
 app.listen(PORT, () => 
