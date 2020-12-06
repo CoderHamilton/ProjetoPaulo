@@ -1,17 +1,6 @@
-// const express = require('express');
-
-// const router = express.Router();
-
-// router.get("/", (req, res) => 
-//   {
-//     res.json( { message: "Hello Word!!" } );
-//   });
-
-// module.exports = router;
-
 module.exports = app =>
   {
-    const livros = require("../controller/livro.controller.js");
+    const livros = require("../controllers/livro.controller.js");
 
     var routes = require("express").Router();
 
@@ -19,11 +8,11 @@ module.exports = app =>
 
     routes.get("/", livros.findAll);
 
-    routes.get("/", livros.findOne);
+    routes.get("/:id", livros.findOne);
 
-    routes.put("/", livros.update);
+    routes.put("/:id", livros.update);
 
-    routes.delete("/", livros.delete);
+    routes.delete("/:id", livros.delete);
 
     routes.delete("/", livros.deleteAll);
 

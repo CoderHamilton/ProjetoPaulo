@@ -1,5 +1,5 @@
-const databaseConfig = require('../config/db.config');
-const Sequelize = require('sequelize');
+const databaseConfig = require("../config/db.config");
+const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(databaseConfig.DB, databaseConfig.USER, databaseConfig.PASSWORD, 
   {
@@ -21,6 +21,6 @@ const database = {};
 database.Sequelize = Sequelize;
 database.sequelize = sequelize;
 
-database.livros = require('./livros.model.js')(sequelize, Sequelize);
+database.livros = require("./livros.model.js")(sequelize, Sequelize);
 
 module.exports = database;
