@@ -6,7 +6,14 @@
   "scripts": {
     "start": "nodemon src/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "sequelize",
+    "mysql"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

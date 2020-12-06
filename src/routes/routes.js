@@ -7,7 +7,7 @@
 //     res.json( { message: "Hello Word!!" } );
 //   });
 
-module.exports = router;
+// module.exports = router;
 
 module.exports = app =>
   {

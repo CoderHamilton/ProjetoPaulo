@@ -16,9 +16,9 @@ exports.create = (req, res) =>
       const livro = 
         {
           titulo: req.body.titulo,
-          autor: req.body.autor,
+          descrição: req.body.descrição,
           ano: req.body.ano,
-          preco: req.body.preco
+          publicado: req.body.publicado ? req.body.publicado : false
         };
       
       Livro.create(livro)

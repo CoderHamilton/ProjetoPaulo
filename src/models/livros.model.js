@@ -3,26 +3,26 @@ const { sequelize } = require(".");
 
 module.exports = (sequelize, Sequelize) => 
   {
-    const Livro = sequelize.define("livro", 
+    const Livros = sequelize.define("livro", 
       {
-        Titulo:
+        titulo:
           {
             type: Sequelize.STRING
           },
-        Descrição:
+        descrição:
           {
             type: Sequelize.STRING
           },
-        Ano:
+        ano:
           {
             type: Sequelize.INTEGER
           },
-        Publicado:
+        publicado:
           {
             type: Sequelize.BOOLEAN
           }
       });
 
-      return Livro;
+      return Livros;
 
   };
