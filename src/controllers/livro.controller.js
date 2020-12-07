@@ -4,7 +4,7 @@ const OP = database.Sequelize.Op;
 
 exports.create = (req, res) => 
   {
-    if(!req.body.title)
+    if(!req.body.titulo)
       {
         res.status(400).send(
           {
